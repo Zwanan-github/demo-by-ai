@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Browser Copilot Demo",
+  "description": "Chat in a side panel and control the current web page with DOM actions.",
+  "version": "0.1.0",
+  "permissions": ["activeTab", "scripting", "sidePanel", "storage", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_title": "Browser Copilot Demo"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ]
+}

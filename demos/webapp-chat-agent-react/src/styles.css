@@ -1,0 +1,48 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #172033;
+  background: #eef2ff;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+.layout { min-height: 100vh; display: grid; grid-template-columns: minmax(0, 1fr) 440px; }
+.app { padding: 32px; }
+.hero { border-radius: 24px; padding: 28px; color: white; background: linear-gradient(135deg, #2563eb, #7c3aed); box-shadow: 0 20px 60px rgba(37, 99, 235, .25); }
+.eyebrow { margin: 0 0 8px; opacity: .8; letter-spacing: .08em; text-transform: uppercase; font-size: 12px; }
+h1, h2, p { margin-top: 0; }
+.card { margin-top: 20px; padding: 22px; border-radius: 22px; background: rgba(255,255,255,.92); border: 1px solid rgba(148,163,184,.28); box-shadow: 0 16px 50px rgba(15,23,42,.08); }
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+label { display: grid; gap: 8px; font-weight: 650; color: #334155; }
+input, select, textarea { width: 100%; border: 1px solid #cbd5e1; border-radius: 12px; padding: 11px 12px; font: inherit; background: white; color: #0f172a; }
+textarea { resize: vertical; }
+.actions { margin-top: 18px; display: flex; justify-content: flex-end; gap: 10px; }
+button { border: 1px solid #cbd5e1; background: white; color: #0f172a; border-radius: 12px; padding: 10px 14px; cursor: pointer; font: inherit; font-weight: 650; }
+button.primary, .chat-form button { background: #2563eb; color: white; border-color: #2563eb; }
+button:disabled { opacity: .6; cursor: not-allowed; }
+pre { min-height: 80px; overflow: auto; white-space: pre-wrap; padding: 16px; background: #0f172a; color: #e2e8f0; border-radius: 16px; }
+.agent { height: 100vh; position: sticky; top: 0; display: flex; flex-direction: column; gap: 12px; padding: 20px; background: rgba(255,255,255,.96); border-left: 1px solid rgba(148,163,184,.35); }
+.config { display: grid; gap: 10px; padding: 12px; border-radius: 18px; background: #f8fafc; border: 1px solid #e2e8f0; }
+.checkbox { display: flex; grid-template-columns: auto 1fr; align-items: center; flex-direction: row; }
+.checkbox input { width: auto; }
+.messages { flex: 1; overflow: auto; display: flex; flex-direction: column; gap: 10px; padding-right: 4px; }
+.msg { white-space: pre-wrap; word-break: break-word; padding: 12px; border-radius: 16px; border: 1px solid #e2e8f0; line-height: 1.45; font-size: 13px; }
+.msg.user { background: #eff6ff; }
+.msg.assistant { background: #ecfdf5; }
+.msg.system { background: #f8fafc; color: #475569; }
+.chat-form { display: grid; gap: 10px; padding-top: 12px; border-top: 1px solid #e2e8f0; }
+@media (max-width: 980px) { .layout { grid-template-columns: 1fr; } .agent { height: auto; min-height: 600px; position: static; border-left: 0; border-top: 1px solid rgba(148,163,184,.35); } .form-grid { grid-template-columns: 1fr; } }
+.hint { margin: 0; color: #64748b; font-size: 12px; line-height: 1.4; }
+.tabs { display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
+.tabs button.active { background: #111827; color: white; border-color: #111827; }
+.muted { color: #64748b; }
+.table { border: 1px solid #e2e8f0; border-radius: 14px; overflow: hidden; }
+.table-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; padding: 12px 14px; border-top: 1px solid #e2e8f0; }
+.table-row:first-child { border-top: 0; }
+.table-head { background: #f8fafc; font-weight: 800; }
+.metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 18px 0; }
+.metrics div { border: 1px solid #e2e8f0; border-radius: 16px; padding: 18px; background: #f8fafc; display: grid; gap: 6px; }
+.metrics strong { font-size: 30px; color: #2563eb; }
+.metrics span { color: #64748b; }
+@media (max-width: 680px) { .table-row, .metrics { grid-template-columns: 1fr; } }
+.tabs a { text-decoration: none; border: 1px solid #cbd5e1; background: white; color: #0f172a; border-radius: 12px; padding: 10px 14px; cursor: pointer; font: inherit; font-weight: 650; }
+.tabs a.active { background: #111827; color: white; border-color: #111827; }

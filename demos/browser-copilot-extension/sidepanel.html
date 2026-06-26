@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Browser Copilot Demo</title>
+    <link rel="stylesheet" href="sidepanel.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Browser Copilot</h1>
+      <button id="observeBtn" title="读取当前页面">观察页面</button>
+    </header>
+
+    <section class="config">
+      <label><input id="mock" type="checkbox" checked /> Use mock planner</label>
+      <input id="baseUrl" placeholder="OpenAI-compatible base URL, e.g. https://api.example.com/v1" />
+      <input id="model" placeholder="model, e.g. gpt-4.1-mini" />
+      <input id="apiKey" type="password" placeholder="API key placeholder" />
+    </section>
+
+    <main id="messages"></main>
+
+    <form id="chatForm">
+      <textarea id="input" rows="3" placeholder="例如：把城市填成杭州，然后点击查询"></textarea>
+      <button type="submit">发送</button>
+    </form>
+
+    <script src="sidepanel.js"></script>
+  </body>
+</html>

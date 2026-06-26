@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Browser Copilot Demo 测试页</title>
+    <style>
+      body { font-family: system-ui, sans-serif; max-width: 760px; margin: 40px auto; padding: 0 20px; }
+      .card { border: 1px solid #ddd; border-radius: 14px; padding: 20px; box-shadow: 0 4px 20px #0001; }
+      label { display: block; margin: 12px 0 6px; }
+      input, select, button { font-size: 16px; padding: 9px; border-radius: 8px; border: 1px solid #bbb; }
+      button { cursor: pointer; }
+      #result { margin-top: 16px; padding: 12px; background: #f6f8fa; border-radius: 10px; min-height: 24px; }
+    </style>
+  </head>
+  <body>
+    <h1>Browser Copilot Demo 测试页</h1>
+    <p>安装扩展后，在侧边栏输入：“把城市填成杭州，然后点击查询”。</p>
+    <div class="card">
+      <label for="city">城市</label>
+      <input id="city" name="city" placeholder="请输入城市，例如杭州" />
+
+      <label for="category">分类</label>
+      <select id="category" name="category">
+        <option value="hotel">酒店</option>
+        <option value="food">美食</option>
+        <option value="travel">旅游</option>
+      </select>
+
+      <button id="searchBtn" type="button">查询</button>
+      <div id="result" aria-live="polite"></div>
+    </div>
+
+    <script>
+      document.getElementById('searchBtn').addEventListener('click', () => {
+        const city = document.getElementById('city').value || '未填写';
+        const category = document.getElementById('category').value;
+        document.getElementById('result').textContent = `已查询：${city} / ${category}。这是由页面脚本生成的结果。`;
+      });
+    </script>
+  </body>
+</html>
