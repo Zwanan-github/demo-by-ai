@@ -68,7 +68,7 @@ demos/browser-copilot-extension/
 新增基于 JEECG Boot Vue3 前端脚手架的 PageAgent 集成 demo：
 
 ```text
-projects/jeecgboot-page-agent-demo/
+projects/jeecgboot-page-agent-fullstack/frontend/
 ```
 
 核心改动：
@@ -81,7 +81,7 @@ projects/jeecgboot-page-agent-demo/
 说明文档：
 
 ```text
-projects/jeecgboot-page-agent-demo/README-page-agent-demo.md
+projects/jeecgboot-page-agent-fullstack/frontend/README-page-agent-demo.md
 ```
 
 
@@ -90,12 +90,13 @@ projects/jeecgboot-page-agent-demo/README-page-agent-demo.md
 JEECG Boot PageAgent demo 需要后端配合，已新增后端工程：
 
 ```text
-projects/jeecgboot-page-agent-demo-backend/
+projects/jeecgboot-page-agent-fullstack/backend/
 ```
 
 前后端完整运行说明：
 
 ```text
-projects/jeecgboot-page-agent-demo/FULLSTACK-README.md
-projects/jeecgboot-page-agent-demo-backend/README-page-agent-backend.md
+projects/jeecgboot-page-agent-fullstack/README.md
+projects/jeecgboot-page-agent-fullstack/frontend/FULLSTACK-README.md
+projects/jeecgboot-page-agent-fullstack/backend/README-page-agent-backend.md
 ```
