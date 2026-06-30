@@ -75,3 +75,24 @@ frontend/src/components/PageAgentChat/PageAgentWebChat.vue
 - Demo 中前端可以直连 OpenAI-compatible API，生产环境建议改成后端代理。
 - PageAgent 会观察当前页面 DOM，生产环境需要进一步脱敏和操作审计。
 - 保存、删除、提交、授权、导出等高风险动作必须先让用户确认。
+
+## 6. 多应用门户跳转测试页
+
+已新增 PageAgent 多应用门户边界测试页面：
+
+```text
+http://localhost:3100/page-agent-portal
+```
+
+包含四种场景：
+
+- **SPA 内路由切换**：`/page-agent-app-a`、`/page-agent-app-b`，PageAgent 挂在 `App.vue` 顶层，不会卸载，可连续操作。
+- **同源 iframe 子应用**：`/page-agent-iframe-shell` 加载 `/page-agent-iframe-app.html`，用于测试同源 iframe 的可操作边界。
+- **整页跳转**：跳到 `/page-agent-external-app.html`，Vue App 和 PageAgent 会卸载，通常只能完成点击跳转这一步。
+- **新 Tab 打开**：目标页在新 tab 中打开，当前页面内的 PageAgent 不能直接控制新 tab。
+
+推荐测试 Prompt：
+
+```text
+打开 PageAgent 门户测试页，依次进入 SPA 应用、iframe 应用和整页跳转应用，告诉我每一步是否还能继续操作页面。
+```

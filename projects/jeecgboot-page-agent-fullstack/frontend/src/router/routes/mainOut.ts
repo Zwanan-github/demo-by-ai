@@ -17,6 +17,42 @@ export const mainOutRoutes: AppRouteModule[] = [
       ignoreAuth: true,
     },
   },
+  {
+    path: '/page-agent-portal',
+    name: 'PageAgentPortal',
+    component: () => import('/@/views/page-agent-portal/Portal.vue'),
+    meta: {
+      title: 'PageAgent 门户测试',
+      ignoreAuth: true,
+    },
+  },
+  {
+    path: '/page-agent-app-a',
+    name: 'PageAgentSpaAppA',
+    component: () => import('/@/views/page-agent-portal/SpaAppA.vue'),
+    meta: {
+      title: 'SPA 应用 A',
+      ignoreAuth: true,
+    },
+  },
+  {
+    path: '/page-agent-app-b',
+    name: 'PageAgentSpaAppB',
+    component: () => import('/@/views/page-agent-portal/SpaAppB.vue'),
+    meta: {
+      title: 'SPA 应用 B',
+      ignoreAuth: true,
+    },
+  },
+  {
+    path: '/page-agent-iframe-shell',
+    name: 'PageAgentIframeShell',
+    component: () => import('/@/views/page-agent-portal/IframeShell.vue'),
+    meta: {
+      title: 'iframe 应用测试',
+      ignoreAuth: true,
+    },
+  },
 ];
 
 export const mainOutRouteNames = mainOutRoutes.map((item) => item.name);

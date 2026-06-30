@@ -126,3 +126,18 @@ PageAgent Web Chat 放在这里可以：
 - 记录 PageAgent 操作 trace；
 - 限制或关闭高风险 JS 执行能力；
 - 在业务关键动作上优先使用显式业务工具，而不是纯 DOM 点击。
+
+## 多应用门户跳转边界测试
+
+访问：
+
+```text
+/page-agent-portal
+```
+
+该页面用于验证：
+
+1. SPA 内路由切换：PageAgent 可持续操作；
+2. 同源 iframe：父页面 Agent 仍存在，同源 iframe 可测试 DOM 访问能力；
+3. 整页跳转：当前 PageAgent 会卸载，只能做到点击跳转；
+4. 新 Tab：当前页面 Agent 不能直接控制新 tab。
