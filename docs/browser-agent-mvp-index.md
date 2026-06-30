@@ -61,3 +61,25 @@ demos/browser-copilot-extension/
 ```
 
 它适合“控制用户当前浏览器 tab/任意网页”的另一个方向，不是当前 Web App 内嵌 Chat Agent 的主线。
+
+
+## 5. JEECG Boot PageAgent Demo
+
+新增基于 JEECG Boot Vue3 前端脚手架的 PageAgent 集成 demo：
+
+```text
+projects/jeecgboot-page-agent-demo/
+```
+
+核心改动：
+
+- 在 `src/App.vue` 顶层挂载 `PageAgentWebChat`；
+- 新增 `src/components/PageAgentChat/PageAgentWebChat.vue`；
+- 使用 `page-agent` 直接观察和操作当前 JEECG Boot 页面 DOM；
+- 通过 `.env.page-agent.example` 配置 OpenAI-compatible API。
+
+说明文档：
+
+```text
+projects/jeecgboot-page-agent-demo/README-page-agent-demo.md
+```
