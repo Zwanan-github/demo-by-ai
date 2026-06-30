@@ -83,3 +83,19 @@ projects/jeecgboot-page-agent-demo/
 ```text
 projects/jeecgboot-page-agent-demo/README-page-agent-demo.md
 ```
+
+
+## 6. JEECG Boot 后端配套
+
+JEECG Boot PageAgent demo 需要后端配合，已新增后端工程：
+
+```text
+projects/jeecgboot-page-agent-demo-backend/
+```
+
+前后端完整运行说明：
+
+```text
+projects/jeecgboot-page-agent-demo/FULLSTACK-README.md
+projects/jeecgboot-page-agent-demo-backend/README-page-agent-backend.md
+```
